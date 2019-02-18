@@ -115,4 +115,20 @@
 
   <ion-range dualKnobs="true" min="0" max="200" step="5" snaps="true"></ion-range>
 
+  <ion-item>
+    <ion-label>Elige un elemento</ion-label>
+    <ion-select value="1" ok-text="OK" cancel-text="Cancelar">
+      <ion-select-option value="1">Primer elemento</ion-select-option>
+      <ion-select-option value="2">Segundo elemento</ion-select-option>
+      <ion-select-option value="3">Tercer elemento</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-label>Elige un elemento</ion-label>
+      <ion-select placeholder="Opciones" ok-text="OK" cancel-text="Cancelar" multiple="true">
+        <ion-select-option value="1">Primer elemento</ion-select-option>
+        <ion-select-option value="2" selected>Segundo elemento</ion-select-option>
+        <ion-select-option value="3" selected>Tercer elemento</ion-select-option>
+      </ion-select>
+    </ion-item>
 </ion-content>
