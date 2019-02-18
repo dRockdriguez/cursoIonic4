@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController, AlertController, LoadingController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-prueba',
@@ -10,7 +10,8 @@ export class PruebaPage implements OnInit {
   constructor(
     private actionSheetCtrl: ActionSheetController,
     private alertCtrl: AlertController,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public toastCtrl: ToastController
   ) { 
 
   }
@@ -57,5 +58,17 @@ export class PruebaPage implements OnInit {
     setTimeout(() => {
       event.target.complete();
     }, 2000);
+  }
+
+  async abreToast(){
+    const toast = await this.toastCtrl.create({
+      message: 'Mensaje',
+      showCloseButton: true,
+      position: 'bottom',
+      duration: 2000,
+      closeButtonText: 'Cerrar',
+      animated: true
+    });
+    await toast.present();
   }
 }

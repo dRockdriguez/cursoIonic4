@@ -124,11 +124,26 @@
     </ion-select>
   </ion-item>
   <ion-item>
-      <ion-label>Elige un elemento</ion-label>
-      <ion-select placeholder="Opciones" ok-text="OK" cancel-text="Cancelar" multiple="true">
-        <ion-select-option value="1">Primer elemento</ion-select-option>
-        <ion-select-option value="2" selected>Segundo elemento</ion-select-option>
-        <ion-select-option value="3" selected>Tercer elemento</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <ion-label>Elige un elemento</ion-label>
+    <ion-select placeholder="Opciones" ok-text="OK" cancel-text="Cancelar" multiple="true">
+      <ion-select-option value="1">Primer elemento</ion-select-option>
+      <ion-select-option value="2" selected>Segundo elemento</ion-select-option>
+      <ion-select-option value="3" selected>Tercer elemento</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-slides id="idSlide" pager>
+    <ion-slide class="claseSlide">
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide class="claseSlide">
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide class="claseSlide">
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-button (click)="abreToast()" expand="block">Activar Toast</ion-button>
+
 </ion-content>
